@@ -8,7 +8,5 @@ public class EnigmaGUI extends EnigmaFrame{
         EnigmaFrame f = new EnigmaFrame();
         f.setTitle("Engima GUI");
         f.setVisible(true);
-        f.setDefaultCloseOperation(EnigmaFrame.EXIT_ON_CLOSE);
-
     }
 }

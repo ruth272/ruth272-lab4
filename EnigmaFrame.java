@@ -2,52 +2,35 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class EnigmaFrame {
-    private JLabel innerValue;
-    private JLabel middleValue;
-    private JLabel outValue;
-    private JLabel initialPosition;
+public class EnigmaFrame extends JFrame{
     private JButton encrypt;
     private JButton decrypt;
     private JTextArea input;
     private JTextArea output;
-    private JTextField rotor1;
-    private JTextField rotor2;
-    private JTextField rotor3;
-
-
+    private JComboBox<Integer> rotor1;
+    private JComboBox<Integer> rotor2;
+    private JComboBox<Integer> rotor3;
+    
     public EnigmaFrame() {
         super();
-        innerValue = new JLabel();
-        middleValue = new JLabel();
-        outValue = new JLabel();
-        initialPosition = new JLabel();
-        encrypt = new JButton();
-        decrypt = new JButton();
+        
+        encrypt = new JButton("Encrpyt");
+        decrypt = new JButton("Decrypt");
         input = new JTextArea();
         output = new JTextArea();
 
+
+        JPanel panel = new JPanel(new FlowLayout());
+        panel.add(new JLabel("Inner"));
+        panel.add(new JLabel("Middle"));
+        panel.add(new JLabel("Out"));
+        panel.add(new JLabel("Initial Positions"));
+        panel.add(encrypt);
+        panel.add(decrypt);
+
+        this.add(panel);
+        this.setDefaultCloseOperation(EnigmaFrame.EXIT_ON_CLOSE);
+        this.pack();
     }
-    
-    public class JComboBox {        //selects the rotor number
 
-    }
-
-    public class JTextField {       //inputs 3 starting characters
-
-    }
-
-    public class JTextArea {        //provide input or output for the encrypt/decrpyt
-
-    }
-
-    public class JButton {      //selects encrpty or decrypt
-        //encrypt = new JButton("Encrypt");
-        //decrypt = new JButton("Decrypt");
-    }
-    
-
-    public class JLabel {           //labels fiels
-        
-    }
 }
