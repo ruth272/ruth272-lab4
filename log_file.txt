@@ -1,0 +1,71 @@
+commit 792a142542dce492a1808c3dbe1ebbe36d931463
+Author: Ruth Teshome <ruthteshome@Ruths-MacBook-Air-3.local>
+Date:   Sun Dec 1 23:02:15 2024 -0500
+
+    last updates
+
+commit 1e76c8a4850b1456e5c02434914509409ab76b31
+Author: Ruth Teshome <ruthteshome@Ruths-MacBook-Air-3.local>
+Date:   Sun Dec 1 20:34:38 2024 -0500
+
+    updating layout
+
+commit 454d5b2c1e22bee2112438a3c0e81656a8611fb6
+Author: Ruth Teshome <ruthteshome@Ruths-MacBook-Air-3.local>
+Date:   Sun Dec 1 19:32:14 2024 -0500
+
+    decrypt is now working but encrypt is outputting wrong message
+
+commit 7fe97b7d4230f34e900a429256c77b7c595912ac
+Author: Ruth Teshome <ruthteshome@Ruths-MacBook-Air-3.local>
+Date:   Sun Dec 1 18:23:26 2024 -0500
+
+    encrption is running but outputing wrong message and decrypt is not working at all
+
+commit b9577add083e63af2032d8e871c195c368cfd1eb
+Author: Ruth Teshome <ruthteshome@Ruths-MacBook-Air-3.local>
+Date:   Sun Dec 1 15:12:43 2024 -0500
+
+    added encrypt/decrpyt functionality but isn't working correctly
+
+commit e76251e8ca83bf446f3f44436c541d435187abef
+Author: Ruth Teshome <ruthteshome@Ruths-Air-3.lan>
+Date:   Sat Nov 30 23:56:08 2024 -0500
+
+    added all required parts of the GUI:
+
+commit 9d538edec42d9614c0b14fd9992d628cd31f6fa5
+Author: Ruth Teshome <ruthteshome@Ruths-Air-3.lan>
+Date:   Sat Nov 30 23:31:52 2024 -0500
+
+    got GUI to pop up when running
+
+commit 8e8bcc969d29bb580723783f1a7add994dc874a4
+Author: Ruth Teshome <ruthteshome@Ruths-MacBook-Air-2.local>
+Date:   Mon Nov 25 12:40:36 2024 -0500
+
+    starting frame and gui
+
+commit edb059b7b4e9f409d5b1b90baaa666a0b5bd0f60
+Author: Ruth Teshome <ruthteshome@Ruths-MacBook-Air-2.local>
+Date:   Sun Nov 24 15:09:57 2024 -0500
+
+    setting up frame and gui classes
+
+commit 8761f8fdc81461dd427a3a29a6f4e8985cd14385
+Author: ruth272 <143119920+ruth272@users.noreply.github.com>
+Date:   Mon Nov 18 14:21:42 2024 -0500
+
+    Create EnigmaFrame.java
+
+commit f89c291662d661d7d927f12bb3b86920ee8a4188
+Author: ruth272 <143119920+ruth272@users.noreply.github.com>
+Date:   Mon Nov 18 14:21:28 2024 -0500
+
+    Create EnigmaGUI.java
+
+commit 58581dc1410153d050938929a3ddddec9fa3305f
+Author: ruth272 <143119920+ruth272@users.noreply.github.com>
+Date:   Mon Nov 18 14:21:16 2024 -0500
+
+    Add files via upload
