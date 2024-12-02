@@ -24,8 +24,8 @@ public class EnigmaFrame extends JFrame {
 
         encrypt = new JButton("Encrypt");
         decrypt = new JButton("Decrypt");
-        input = new JTextArea(20, 200);
-        output = new JTextArea(20, 200);
+        input = new JTextArea(20, 50);
+        output = new JTextArea(20, 50);
         output.setEditable(false);
         rotor1 = new JComboBox<Integer>(num);
         rotor2 = new JComboBox<Integer>(num);
@@ -59,6 +59,8 @@ public class EnigmaFrame extends JFrame {
 
         ConvertActionListener e = new ConvertActionListener();
 
+        encrypt.setActionCommand("encrypt");
+        decrypt.setActionCommand("decrypt");
         encrypt.addActionListener(e);
         decrypt.addActionListener(e);
         
@@ -77,18 +79,27 @@ public class EnigmaFrame extends JFrame {
                 int outer = (int) rotor3.getSelectedItem();
                 String result = null;
                 String start = startChar.getText();
+
+                if(start.length() != 3){
+                    throw new Exception();
+                }
+
+                start = start.toUpperCase();
+                text = text.toUpperCase();
+
                 Enigma en = new Enigma(inner, middle, outer, start);
                 
                 String e2 = ee.getActionCommand();
-                if("encrypt".equals(e2)) {
-                    result = en.encrypt(text);
-                }
-                else {
+                if("decrypt".equals(e2)) {
                     result = en.decrypt(text);
                 }
+                else if ("encrypt".equals(e2)) {
+                    result = en.encrypt(text);
+                }
+            
                 output.setText(result);
                 }catch(Exception e){
-                output.setText("Error occured. Make sure initial position has 3 characters.");
+                output.setText("Error occured. Check initial positions has 3 characters.");
             }
         }
     }
