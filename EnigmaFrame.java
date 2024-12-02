@@ -2,7 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class EnigmaFrame extends JFrame{
+public class EnigmaFrame extends JFrame {
+    private JFrame f;
     private JButton encrypt;
     private JButton decrypt;
     private JTextArea input;
@@ -12,15 +13,19 @@ public class EnigmaFrame extends JFrame{
     private JComboBox<Integer> rotor3;
     private JTextField startChar;
     
-    private final Integer[] num = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    private final Integer[] num = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26};
 
     public EnigmaFrame() {
         super();
-        
-        encrypt = new JButton("Encrpyt");
+        f = new JFrame();
+        f.setTitle("Engima GUI");
+        f.setSize(500,500);
+
+        encrypt = new JButton("Encrypt");
         decrypt = new JButton("Decrypt");
-        input = new JTextArea(5, 20);
-        output = new JTextArea(5, 20);
+        input = new JTextArea(20, 200);
+        output = new JTextArea(20, 200);
         output.setEditable(false);
         rotor1 = new JComboBox<Integer>(num);
         rotor2 = new JComboBox<Integer>(num);
@@ -29,7 +34,7 @@ public class EnigmaFrame extends JFrame{
 
 
         JPanel panel = new JPanel(new FlowLayout());
-        //add(panel, BorderLayout.NORTH);
+        f.add(panel, BorderLayout.NORTH);
         panel.add(new JLabel("Inner"));
         panel.add(rotor1);
         panel.add(new JLabel("Middle"));
@@ -41,23 +46,25 @@ public class EnigmaFrame extends JFrame{
         panel.add(encrypt);
         panel.add(decrypt);
 
-        JPanel dpanel = new JPanel(new FlowLayout());
-        add(dpanel, BorderLayout.SOUTH);
-        dpanel.add(new JLabel("Input"));
-        dpanel.add(input);
-        dpanel.add(new JLabel("output"));
-        dpanel.add(output);
+        JPanel panel2 = new JPanel(new FlowLayout());
+        f.add(panel2, BorderLayout.CENTER);
+        panel2.add(new JLabel("Input"));
+        panel2.add(input);
+        
+
+        JPanel panel3 = new JPanel(new FlowLayout());
+        f.add(panel3, BorderLayout.SOUTH);
+        panel3.add(new JLabel("Output"));
+        panel3.add(output);
 
         ConvertActionListener e = new ConvertActionListener();
 
-        //encrypt.addActionListener(text -> convertText(true));
-        //decrypt.addActionListener(text -> convertText(false));
         encrypt.addActionListener(e);
         decrypt.addActionListener(e);
         
-        this.add(panel);
-        this.setDefaultCloseOperation(EnigmaFrame.EXIT_ON_CLOSE);
-        this.pack();
+        f.pack();
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);  
     }
 
     private class ConvertActionListener implements ActionListener{
@@ -81,7 +88,7 @@ public class EnigmaFrame extends JFrame{
                 }
                 output.setText(result);
                 }catch(Exception e){
-                output.setText("Starting character needs to be exactly 3.");
+                output.setText("Error occured. Make sure initial position has 3 characters.");
             }
         }
     }
