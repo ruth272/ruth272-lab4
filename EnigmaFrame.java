@@ -71,10 +71,12 @@ public class EnigmaFrame extends JFrame{
                 String result = null;
                 String start = startChar.getText();
                 Enigma en = new Enigma(inner, middle, outer, start);
-                if(ee.equals(encrypt)) {
+                
+                String e2 = ee.getActionCommand();
+                if("encrypt".equals(e2)) {
                     result = en.encrypt(text);
                 }
-                else if(ee.equals(decrypt)){
+                else {
                     result = en.decrypt(text);
                 }
                 output.setText(result);
